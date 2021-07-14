@@ -8,21 +8,24 @@ public class Calc {
         Convert cl2 = new Convert();
         Convert cl3 = new Convert();
         Scanner sc = new Scanner(System.in);
-        String[] calc = new String[3];
+        String[] calc = new String[2];
 
         System.out.println("Введите число: ");
         String data = sc.nextLine();
         calc = data.split(" ");
 
-        if (calc[0].equals(calc[2])) {
-            if (Character.isDigit(data.charAt(0))) {
+
+
+
+            if (Character.isDigit(calc[0].charAt(0)) && Character.isDigit(calc[2].charAt(0))) {
 
                 int a = Integer.parseInt(calc[0]);
                 int b = Integer.parseInt(calc[2]);
                 System.out.println("Ответ: " + Calc.getResult(a, b, calc[1]));
 
 
-            } else {
+            } else
+                if (Character.isLetter(calc[0].charAt(0)) && Character.isLetter(calc[2].charAt(0))){
 
                 cl1.setK(calc[0]);
                 int a = cl1.convertRomeToArabic();
@@ -30,12 +33,9 @@ public class Calc {
                 cl2.setK(calc[2]);
                 int b = cl2.convertRomeToArabic();
 
-                cl3.setA(Calc.getResult(a, b, calc[1]));
-                System.out.println(cl3.convertFrArabicToRome());
-            }
-        } else {
-            System.out.println("Хьюстон у нас проблема!");
-        }
+                System.out.println("Ответ: " + cl3.calculationATR(Calc.getResult(a, b, calc[1])));
+
+            } else {System.out.println("Это так не работает!");}
 
 
 
