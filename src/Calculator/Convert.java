@@ -12,6 +12,7 @@ public class Convert {
 
 
     public String calculationATR(int n) {
+
         String lastNumR;
         String firstNumR;
         String result = "";
@@ -80,7 +81,7 @@ public class Convert {
             firstNumR = Convert.convert(k);
             result = firstNumR + lastNumR;
         } else {
-            result = Convert.convert(n);
+            result = convert(n);
         }
         return result;
     }
@@ -125,7 +126,7 @@ public class Convert {
                 result = "XXX";
                 break;
             case 40:
-                result = "XXXX";
+                result = "XL";
                 break;
             case 50:
                 result = "L";
@@ -137,10 +138,10 @@ public class Convert {
                 result = "LXX";
                 break;
             case 80:
-                result = "LXX";
+                result = "LXXX";
                 break;
             case 90:
-                result = "LXXX";
+                result = "XC";
                 break;
             case 100:
                 result = "C";

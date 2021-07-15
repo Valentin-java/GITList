@@ -35,7 +35,7 @@ public class Calc {
 
                 System.out.println("Ответ: " + cl3.calculationATR(Calc.getResult(a, b, calc[1])));
 
-            } else {System.out.println("Это так не работает!");}
+            } else {System.out.println("Так это не работает!");}
 
 
 
