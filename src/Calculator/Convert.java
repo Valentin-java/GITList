@@ -3,87 +3,68 @@ package Calculator;
 public class Convert {
     private String k;
 
-
     public void setK(String k) {
         this.k = k;
     }
 
-
-
-
-    public String calculationATR(int n) {
-
-        String lastNumR;
-        String firstNumR;
+    public static String calculationATR(int n) {
         String result;
 
         if ((n > 11) && (n <= 19)) {
             int b = n - 10;
-            lastNumR = Convert.convert(b);
             int k = 10;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         }else
         if ((n >= 21) && (n <= 29)){
             int b = n - 20;
-            lastNumR = Convert.convert(b);
             int k = 20;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
-
+            result = Convert.converted(k, b);
         } else
         if ((n >= 31) && (n <= 39)){
             int b = n - 30;
-            lastNumR = Convert.convert(b);
             int k = 30;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 41) && (n <= 49)){
             int b = n - 40;
-            lastNumR = Convert.convert(b);
             int k = 40;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 51) && (n <= 59)){
             int b = n - 50;
-            lastNumR = Convert.convert(b);
             int k = 50;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 61) && (n <= 69)){
             int b = n - 60;
-            lastNumR = Convert.convert(b);
             int k = 60;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 71) && (n <= 79)){
             int b = n - 70;
-            lastNumR = Convert.convert(b);
             int k = 70;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 81) && (n <= 89)){
             int b = n - 80;
-            lastNumR = Convert.convert(b);
             int k = 80;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else
         if ((n >= 91) && (n <= 99)){
             int b = n - 90;
-            lastNumR = Convert.convert(b);
             int k = 90;
-            firstNumR = Convert.convert(k);
-            result = firstNumR + lastNumR;
+            result = Convert.converted(k, b);
         } else {
             result = Convert.convert(n);
         }
         return result;
+    }
+
+    public static String converted(int k, int b) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(Convert.convert(k));
+        sb.append(Convert.convert(b));
+        return sb.toString();
     }
 
     public static String convert(int a) {
@@ -147,7 +128,7 @@ public class Convert {
                 result = "C";
                 break;
             default:
-                System.out.println("Что то пошло не так");
+                System.out.println("Ответ больше 100.");
         }
         return result;
     }
