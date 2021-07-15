@@ -15,7 +15,7 @@ public class Convert {
 
         String lastNumR;
         String firstNumR;
-        String result = "";
+        String result;
 
         if ((n > 11) && (n <= 19)) {
             int b = n - 10;
@@ -81,7 +81,7 @@ public class Convert {
             firstNumR = Convert.convert(k);
             result = firstNumR + lastNumR;
         } else {
-            result = convert(n);
+            result = Convert.convert(n);
         }
         return result;
     }
