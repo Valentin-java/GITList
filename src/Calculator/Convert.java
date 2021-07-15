@@ -11,58 +11,50 @@ public class Convert {
         String result;
 
         if ((n > 11) && (n <= 19)) {
-            int b = n - 10;
             int k = 10;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         }else
         if ((n >= 21) && (n <= 29)){
-            int b = n - 20;
             int k = 20;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 31) && (n <= 39)){
-            int b = n - 30;
             int k = 30;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 41) && (n <= 49)){
-            int b = n - 40;
             int k = 40;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 51) && (n <= 59)){
-            int b = n - 50;
             int k = 50;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 61) && (n <= 69)){
-            int b = n - 60;
             int k = 60;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 71) && (n <= 79)){
-            int b = n - 70;
             int k = 70;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 81) && (n <= 89)){
-            int b = n - 80;
             int k = 80;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else
         if ((n >= 91) && (n <= 99)){
-            int b = n - 90;
             int k = 90;
-            result = Convert.converted(k, b);
+            result = converted(k, n);
         } else {
-            result = Convert.convert(n);
+            result = convert(n);
         }
         return result;
     }
 
-    public static String converted(int k, int b) {
+    public static String converted(int k, int n) {
         StringBuilder sb = new StringBuilder();
         sb.append(Convert.convert(k));
+        int b = n - k;
         sb.append(Convert.convert(b));
         return sb.toString();
     }
